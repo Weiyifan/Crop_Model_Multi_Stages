@@ -1,4 +1,4 @@
-# SimpleCropModel
+# Crop_Model_Multi_Stages
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -28,15 +28,15 @@
 ### 安装
 
 ```bash
-git clone https://github.com/Weiyifan/simple-crop-model.git
-cd simple-crop-model
+git clone https://github.com/Weiyifan/Crop_Model_Multi_Stages.git
+cd Crop_Model_Multi_Stages
 pip install -e .
 ```
 
 ### 基础用法
 
 ```python
-from simple_crop_model import CropParameters, SimpleCropModel, generate_weather
+from Crop_Model_Multi_Stages import CropParameters, SimpleCropModel, generate_weather
 
 # 1. 使用预定义作物参数 (玉米、小麦、水稻)
 params = CropParameters.maize()
@@ -58,7 +58,7 @@ print(f"物候期转换次数: {len(results['stage_transitions'])}")
 ### 自定义多物候期
 
 ```python
-from simple_crop_model import CropParameters, PhenologyStage
+from Crop_Model_Multi_Stages import CropParameters, PhenologyStage
 
 # 定义6个物候期的玉米模型
 stages = [
@@ -164,7 +164,7 @@ params = CropParameters(
 ## 项目结构
 
 ```plain
-SimpleCropModel/
+Crop_Model_Multi_Stages/
 ├── src/simple_crop_model/  # 核心源码
 │   ├── __init__.py        # 包初始化
 │   ├── core.py            # 模型类 (SimpleCropModel, AdvancedCropModel)
@@ -184,7 +184,7 @@ SimpleCropModel/
 ### 使用AdvancedCropModel
 
 ```python
-from simple_crop_model import AdvancedCropModel
+from Crop_Model_Multi_Stages import AdvancedCropModel
 
 # 高级模型支持源库关系和更多输出变量
 config = {
@@ -205,7 +205,7 @@ print(f"平均库强度: {results['avg_sink_strength']:.2f}")
 ### 获取物候期统计信息
 
 ```python
-from simple_crop_model import get_stage_statistics
+from Crop_Model_Multi_Stages import get_stage_statistics
 
 stats = get_stage_statistics(results['daily_data'])
 for stage_name, stage_info in stats.items():
@@ -216,7 +216,7 @@ for stage_name, stage_info in stats.items():
 ### 导出结果
 
 ```python
-from simple_crop_model import export_to_csv, save_results
+from Crop_Model_Multi_Stages import export_to_csv, save_results
 
 # 导出逐日数据到CSV
 export_to_csv(results, "simulation_results.csv")
@@ -228,7 +228,7 @@ save_results(results, "simulation_results.json")
 ### 验证参数
 
 ```python
-from simple_crop_model import validate_parameters
+from Crop_Model_Multi_Stages import validate_parameters
 
 errors = validate_parameters(params)
 if errors:
@@ -254,7 +254,7 @@ params2 = CropParameters(phenology_stages=stages_v2)
 results1 = SimpleCropModel(params1).run(weather)
 results2 = SimpleCropModel(params2).run(weather)
 
-from simple_crop_model import compare_scenarios
+from Crop_Model_Multi_Stages import compare_scenarios
 compare_scenarios([results1, results2], ["标准", "延长灌浆"])
 ```
 
@@ -301,7 +301,7 @@ class CropParameters:
     def get_stage_progress(self, gdd: float) -> float
 ```
 
-### SimpleCropModel
+### Crop_Model_Multi_Stages
 
 ```python
 class SimpleCropModel:
