@@ -320,17 +320,17 @@ class SimpleCropModel:
 如果你在工作中使用了本模型，请引用：
 
 ```plain
-@software{simple_crop_model,
+@software{Crop_Model_Multi_Stages,
   author = {Weiyifan},
-  title = {SimpleCropModel: A Multi-Phenology Crop Growth Simulation Model},
-  year = {2024},
+  title = {Crop_Model_Multi_Stages: A Multi-Phenology Crop Growth Simulation Model},
+  year = {2026},
   url = {https://github.com/Weiyifan/simple-crop-model}
 }
 ```
 
 ## 更新日志
 
-### v0.2.0 (2024)
+### v0.2.0 (2026)
 - 新增多物候期支持
 - 物候期间平滑过渡
 - 新增 PhenologyStage 类
