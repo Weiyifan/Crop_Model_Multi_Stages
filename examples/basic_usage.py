@@ -5,8 +5,8 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from simple_crop_model import CropParameters, SimpleCropModel, generate_weather
-from simple_crop_model.utils import print_summary
+from Crop_Model_Multi_Stages import CropParameters, SimpleCropModel, generate_weather
+from Crop_Model_Multi_Stages.utils import print_summary
 
 def main():
     # 1. 创建作物参数 (使用预定义的玉米参数 - 包含6个物候期)
