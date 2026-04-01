@@ -324,7 +324,7 @@ class SimpleCropModel:
   author = {Weiyifan},
   title = {Crop_Model_Multi_Stages: A Multi-Phenology Crop Growth Simulation Model},
   year = {2026},
-  url = {https://github.com/Weiyifan/simple-crop-model}
+  url = {https://github.com/Weiyifan/Crop_Model_Multi_Stages}
 }
 ```
 
