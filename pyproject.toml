@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crop-model-multi-stages"
+version = "1.0.0"
+description = "基于生理过程的多物候期作物生长模拟模型"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Wei Yifan", email = "silence.63@163.com"}
+]
+keywords = ["agriculture", "crop model", "simulation", "phenology", "multi-stage"]
+dependencies = [
+    "numpy>=1.18.0",
+    "pandas>=1.0.0",
+    "matplotlib>=3.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=6.0", "black>=22.0", "flake8>=4.0"]
+docs = ["sphinx>=4.0"]
+
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
