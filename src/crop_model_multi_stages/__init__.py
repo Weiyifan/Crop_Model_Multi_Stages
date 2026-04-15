@@ -6,7 +6,7 @@ Crop_Model_Multi_Stages - 多物候期作物生长模拟模型
 - 积温(GDD)驱动的物候发育
 - Beer-Lambert光截获定律
 - 动态生物量分配
-- 环境胁迫响应
+- 环境胁迫响应（通过系数折算）
 """
 
 __version__ = "1.0.0"
