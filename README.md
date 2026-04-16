@@ -3,7 +3,7 @@
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-基于生理过程的多物候期作物生长模拟模型，支持自定义物候期数量和参数配置，适用于产量预测、气候变化影响评估和环控措施优化。
+基于生理过程的多物候期作物生长模拟模型，支持自定义基于积温量物候期数量和对应物候期的参数配置，适用于产量预测、气候变化影响评估和环控措施优化。
 
 ## 模型特点
 
